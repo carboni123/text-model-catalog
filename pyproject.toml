@@ -1,0 +1,17 @@
+[project]
+name = "text-model-catalog"
+version = "0.0.1"
+description = "Deterministic Pydantic models for grounding LLM output"
+authors = [{ name = "Diego Carboni", email = "diegofcarboni@gmail.com" }]
+dependencies = ["pydantic>=2.11.3"]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "pre-commit"]
+examples = [
+  "python-dotenv>=1.1.0",      # for generate_invoice_openai.py
+  "openai>=1.75.0",      # for generate_invoice_openai.py
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
